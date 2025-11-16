@@ -26,9 +26,9 @@ struct ListView: View {
                             NavigationLink(destination: DetailView(book: book)) {
                                 ListRowView(book: book)
                             }
-                            .buttonStyle(.plain) // ⚡ itt a NavigationLink-re!
+                            .buttonStyle(.plain)
                             .listRowSeparator(.hidden)
-                            .listRowInsets(EdgeInsets())
+                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                         }
                         
                     }
