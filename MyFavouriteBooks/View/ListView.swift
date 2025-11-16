@@ -30,7 +30,7 @@ struct ListView: View {
                             .listRowSeparator(.hidden)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                         }
-                        
+                        .onDelete(perform: vm.deleteBook)
                     }
                 }
                 .listStyle(.plain)

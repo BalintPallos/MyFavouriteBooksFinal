@@ -15,27 +15,6 @@ class BookViewModel : ObservableObject {
     init() {
         loadBooks()
         
-        // this can be deleted after testing
-        if books.isEmpty { // csak akkor adj hozzá példákat, ha nincs mentett adat
-            books = [
-                Book(title: "Anna nagy napja",
-                     author: "Példa Szerző",
-                     description: "Ez egy példa könyv leírása.",
-                     coverUrl: "https://picsum.photos/200",
-                     isPolidrome: true),
-                Book(title: "Szerelem és kaland",
-                     author: "Másik Szerző",
-                     description: "Izgalmas kaland a természetben.",
-                     coverUrl: "https://picsum.photos/201",
-                     isPolidrome: false),
-                Book(title: "Otto utazása",
-                     author: "Tanuló Fejlesztő",
-                     description: "Ismerkedés a SwiftUI világával.",
-                     coverUrl: "https://picsum.photos/202",
-                     isPolidrome: true)
-            ]
-            saveBooks()
-        }
     }
         
         // MARK: Adding a book
@@ -60,6 +39,11 @@ class BookViewModel : ObservableObject {
                 books = savedBooks
             }
         }
+    
+    func deleteBook(at offsets: IndexSet) {
+        books.remove(atOffsets: offsets)
+        saveBooks()
+    }
         
         // MARK: Cheking if the title contains a polidrome word
         func checkIfPolidrome(for book: Book) -> Bool {
