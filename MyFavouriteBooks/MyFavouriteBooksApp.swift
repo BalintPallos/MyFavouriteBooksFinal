@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct MyFavouriteBooksApp: App {
+    @StateObject private var vm = BookViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            let vm = BookViewModel()
-            ListView(vm: vm)
+            ListView()
+                .environmentObject(vm)
         }
     }
 }

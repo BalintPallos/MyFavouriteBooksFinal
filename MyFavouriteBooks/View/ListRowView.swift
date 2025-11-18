@@ -55,4 +55,5 @@ struct ListRowView: View {
         coverUrl: "https://picsum.photos/200",
         isPolidrome: true
     ))
+    .environmentObject(BookViewModel())
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddBookView: View {
-    @ObservedObject var vm: BookViewModel
+    @EnvironmentObject var vm: BookViewModel
     @Environment(\.dismiss) var dismiss
     
     @State var title : String = ""
@@ -76,6 +76,6 @@ struct AddBookView: View {
 }
  
 #Preview {
-    let vm = BookViewModel()
-     AddBookView(vm: vm)
+    AddBookView()
+            .environmentObject(BookViewModel())
 }

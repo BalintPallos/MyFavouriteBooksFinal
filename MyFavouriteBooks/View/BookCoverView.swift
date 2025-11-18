@@ -41,13 +41,15 @@ struct BookCoverView: View {
                     EmptyView()
                 }
             }
+        } else {
+            
         }
     }
 }
 
 #Preview {
     BookCoverView(
-        urlString: "ht",
+        urlString: "https://picsum.photos/200",
         width: 60,
         height: 90
     )

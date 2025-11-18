@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListView: View {
-    @ObservedObject var vm : BookViewModel
+    @EnvironmentObject var vm : BookViewModel
     
     var body: some View {
         
@@ -37,7 +37,7 @@ struct ListView: View {
                 .listStyle(.plain)
                 
                 // MARK: Navigating to the BookView screen
-                NavigationLink(destination: AddBookView(vm: vm)) {
+                NavigationLink(destination: AddBookView()) {
                     Text("Új könyv hozzáadása")
                         .frame(height: 40)
                         .frame(maxWidth: .infinity)
@@ -57,5 +57,6 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView(vm: BookViewModel())
+    ListView()
+        .environmentObject(BookViewModel())
 }
