@@ -11,6 +11,7 @@ struct ListView: View {
     @ObservedObject var vm : BookViewModel
     
     var body: some View {
+        
         NavigationStack {
             ZStack(alignment: .bottom) {
                 List {
@@ -51,6 +52,7 @@ struct ListView: View {
             }
             .navigationTitle("Kedvenc könyveim")
         }
+        
     }
 }
 

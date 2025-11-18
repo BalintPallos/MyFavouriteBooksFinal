@@ -17,6 +17,7 @@ struct AddBookView: View {
     @State var coverUrl: String = ""
     
     var body: some View {
+        
         NavigationStack {
             ZStack (alignment: .bottom) {
                 Form {
@@ -31,13 +32,11 @@ struct AddBookView: View {
                             .textInputAutocapitalization(.sentences)
                         TextField("Kép URL", text: $coverUrl)
                         
-                        
                     }
-
                 }
                 .navigationTitle("Könyv hozzáadása")
                 
-                
+                // MARK: Button for creating new Book
                     Button {
                         let newBook = Book(
                             title: title,
@@ -65,6 +64,7 @@ struct AddBookView: View {
         }
     }
     
+    // MARK: book save logic for button
     func canBeSaved() -> Bool {
         return title.count > 1 && author.count > 1 &&
         description.count > 1 && coverUrl.count > 1

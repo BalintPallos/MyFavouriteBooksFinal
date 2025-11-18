@@ -22,5 +22,4 @@ struct Book : Codable, Identifiable {
         self.coverUrl = coverUrl
         self.isPolidrome = isPolidrome
     }
-    
 }

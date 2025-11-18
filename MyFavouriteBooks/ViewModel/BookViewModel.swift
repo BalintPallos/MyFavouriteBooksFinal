@@ -14,7 +14,6 @@ class BookViewModel : ObservableObject {
     
     init() {
         loadBooks()
-        
     }
         
         // MARK: Adding a book
@@ -40,14 +39,13 @@ class BookViewModel : ObservableObject {
             }
         }
     
-        // MARK: Delete book
-    
+        // MARK: Delete a book
         func deleteBook(at offsets: IndexSet) {
             books.remove(atOffsets: offsets)
             saveBooks()
         }
         
-        // MARK: Cheking if the title contains a polidrome word
+        // MARK: Polidrome checking
         func checkIfPolidrome(for book: Book) -> Bool {
             let words = book.title.lowercased().components(separatedBy:  " ")
             return words.contains { word in
