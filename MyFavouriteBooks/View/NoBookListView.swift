@@ -18,10 +18,20 @@ struct NoBookListView: View {
                 Text(title)
                     .font(.title2)
             } icon: {
-                Image(systemName: icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 95, height: 95)
+                ZStack {
+                    Circle()
+                        .fill(.blue.gradient)
+                        .stroke(.blue.gradient.opacity(0.15), lineWidth: 30)
+                        .stroke(.blue.gradient.opacity(0.15), lineWidth: 60)
+                        .stroke(.blue.gradient.opacity(0.15), lineWidth: 90)
+                        .frame(width: 200)
+                        .padding(.vertical, 50)
+                    Image(systemName: icon)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 120, height: 120)
+                        .foregroundStyle(.white)
+                }
             }
         } description: {
             Text(description)
