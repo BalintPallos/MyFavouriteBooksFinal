@@ -31,6 +31,7 @@ struct NoBookListView: View {
                         .scaledToFit()
                         .frame(width: 120, height: 120)
                         .foregroundStyle(.thickMaterial)
+                        .symbolEffect(.breathe, options: .speed(0.5))
                 }
             }
         } description: {
