@@ -30,7 +30,7 @@ struct NoBookListView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 120, height: 120)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.thickMaterial)
                 }
             }
         } description: {
