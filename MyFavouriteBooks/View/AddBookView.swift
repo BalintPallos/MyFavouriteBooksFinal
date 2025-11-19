@@ -64,14 +64,10 @@ struct AddBookView: View {
         }
     }
     
-    // MARK: book save logic for button
+    // MARK: button avaiable for saving
     func canBeSaved() -> Bool {
         return title.count > 1 && author.count > 1 &&
         description.count > 1 && coverUrl.count > 1
-    }
-    
-    func isEnoughDataForSaving() -> Bool {
-        return !title.isEmpty && !author.isEmpty && !description.isEmpty && !coverUrl.isEmpty
     }
 }
  

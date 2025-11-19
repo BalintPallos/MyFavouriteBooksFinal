@@ -44,7 +44,7 @@ class BookViewModel : ObservableObject {
             books.remove(atOffsets: offsets)
             saveBooks()
         }
-        
+    
         // MARK: Polidrome checking
         func checkIfPolidrome(for book: Book) -> Bool {
             let words = book.title.lowercased().components(separatedBy:  " ")
