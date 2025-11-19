@@ -47,10 +47,17 @@ class BookViewModel : ObservableObject {
     
         // MARK: Polidrome checking
         func checkIfPolidrome(for book: Book) -> Bool {
-            let words = book.title.lowercased().components(separatedBy:  " ")
-            return words.contains { word in
-                word == String(word.reversed()) && word.count > 1
-            
-        }
+            let words = book.title
+                    .lowercased()
+                    .components(separatedBy: " ")
+                
+                for item in words {
+                    let filteredWord = item.filter { $0.isLetter }
+                    if filteredWord.count > 1 && filteredWord == String(filteredWord.reversed()) {
+                        return true
+                    }
+                }
+                return false
+        
     }
 }
