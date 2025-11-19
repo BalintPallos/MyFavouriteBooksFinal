@@ -54,8 +54,8 @@ struct DetailView: View {
 
 #Preview {
     DetailView(book: Book(
-        title: "Anna nagy napja",
-        author: "Példa Szerző",
+        title: "Harry Potter",
+        author: "J.K Rowling",
         description: "Harry Potter J. K. Rowling hét kötetből álló, fantasy műfajú regénysorozata. Főhőse egy kamasz varázsló, Harry Potter, és az ő barátai, Ron Weasley és Hermione Granger, akik a Roxfort Boszorkány- és Varázslóképző Szakiskola tanulói. A történet arról szól, miként próbálja meg Harry legyőzni a gonosz varázslót, Voldemort Nagyurat, aki megölte Harry szüleit és megpróbálja meghódítani a varázslóvilágot, s leigázni a varázstalan embereket, a muglikat. A könyv-sorozatból számos film, videójáték és más termék is készült.",
         coverUrl: "https://picsum.photos/200",
         isPolidrome: false

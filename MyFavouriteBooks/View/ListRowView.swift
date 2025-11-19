@@ -49,9 +49,9 @@ struct ListRowView: View {
 
 #Preview {
     ListRowView(book: Book(
-        title: "Anna nagy napja",
-        author: "Példa Szerző",
-        description: "Ez egy példa könyv leírása.",
+        title: "Anna a háborúban",
+        author: "Kiss Endre",
+        description: "Ez a könyv leírása.",
         coverUrl: "https://picsum.photos/200",
         isPolidrome: true
     ))
